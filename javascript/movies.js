@@ -1,22 +1,19 @@
 const url = 'https://api.themoviedb.org/3/movie/436270?api_key=4125d5c1ddacae373a5219254ef25e65'
 
 const requestMOvie = async(url) =>{
-    try{
-        const response = await fetch(url);
-        console.log(response);
 
-        if(response.status === 200){
-            const data = await response.json();
-            console.log(data);
-            displayData(data);
-        }else if(response.status === 401){
-            console.log('Ups, something went wrong...')
-        }else if(response.status === 404){
-            console.log('The requested movie, does not exist, please check your url')
-        }
-    }catch(error){
-        console.log(error);
-    }
+    const response = await fetch(url);
+    console.log(response);
+
+    if(response.status === 200){
+        const data = await response.json();
+        console.log(data);
+        displayData(data);
+    }else if(response.status === 401){
+        console.log('Ups, something went wrong...')
+    }else if(response.status === 404){
+        console.log('The requested movie, does not exist, please check your url')
+    }    
 }
 
 const displayData = (data) =>{
