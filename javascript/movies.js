@@ -22,4 +22,5 @@ const displayData = (data) =>{
     outputDiv = document.querySelector('#container').innerHTML = content;
 }
 
+
 requestMOvie(url);
