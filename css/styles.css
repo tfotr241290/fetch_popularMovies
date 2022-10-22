@@ -43,9 +43,14 @@ body{
 }
 
 .container .genres{
-    grid-column: 5/13;
+    grid-column: 5/10;
     grid-row: 2/3;
     font-weight: bold;
+}
+
+.genres button{
+    grid-column: 10/13;
+    grid-row: 2/3;
 }
 
 .container h3,p{
