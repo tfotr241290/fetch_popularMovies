@@ -8,7 +8,7 @@ const requestMOvie = async(url,link) =>{
     console.log(response);
     console.log(response2);
 
-    if(response.status === 200 || response2.status ===200){
+    if(response.status === 200 && response2.status ===200){
         const data = await response.json();
         const data2 = await response2.json();
         console.log(data);
